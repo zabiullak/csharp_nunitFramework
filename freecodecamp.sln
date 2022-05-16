@@ -10,9 +10,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCodeCamp", "FreeCodeCam
 		{81D8E97B-B4E7-4804-A684-94254DACCBE6} = {81D8E97B-B4E7-4804-A684-94254DACCBE6}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCodeCamp.Test", "FreeCodeCamp.Tests\FreeCodeCamp.Test.csproj", "{D96C58F7-869E-4699-BADD-734FD593B8C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCodeCamp.Tests", "FreeCodeCamp.Tests\FreeCodeCamp.Tests.csproj", "{D96C58F7-869E-4699-BADD-734FD593B8C7}"
 	ProjectSection(ProjectDependencies) = postProject
 		{81AC884A-02C7-44D7-AD94-100AA798DD32} = {81AC884A-02C7-44D7-AD94-100AA798DD32}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0EE72A3-239B-4BF1-8F8B-9A47FBD2B95E}"
+	ProjectSection(SolutionItems) = preProject
+		framework-config.json = framework-config.json
 	EndProjectSection
 EndProject
 Global
