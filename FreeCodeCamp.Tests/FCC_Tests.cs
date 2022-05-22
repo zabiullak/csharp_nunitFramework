@@ -7,10 +7,11 @@ using Framework;
 
 namespace FreeCodeCamp.Tests
 {
-    public class HomeTests : TestBase 
+    public class FCC_Tests : TestBase 
     {
         [Test,Category("HomePage")]
-        public void printAllNewsHeadings()
+        [Parallelizable]
+        public void PrintAllNewsHeadings()
         {
             List<string> lstOfNews = Pages.GotoFreeCodeCamp().GotoMenu().ClickOnNews().GetTheNewsTitle();
             foreach(string name in lstOfNews) {
@@ -18,5 +19,7 @@ namespace FreeCodeCamp.Tests
             }
             Assert.That(lstOfNews, Is.Not.Empty.Or.Not.Null);
         }
+
+        
     }
 }

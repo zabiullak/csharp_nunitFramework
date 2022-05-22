@@ -1,4 +1,5 @@
-﻿using Framework.Selenium;
+﻿using Framework;
+using Framework.Selenium;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace FreeCodeCamp.WebPages
         public NewsPage ClickOnNews()
         {
             Map.Lnk_News.Click();
+            FW.Log.Info("Clicked on News");
             //Driver.Window.SwitchTo(1);
             //Driver.Window.SwitchTo(0);
             return new NewsPage();

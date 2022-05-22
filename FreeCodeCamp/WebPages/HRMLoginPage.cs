@@ -1,4 +1,5 @@
-﻿using Framework.Selenium;
+﻿using Framework;
+using Framework.Selenium;
 using OpenQA.Selenium;
 using System;
 
@@ -15,18 +16,21 @@ namespace FreeCodeCamp.WebPages
         public HRMLoginPage EnterUserName(string username)
         {
             Map.TextboxUsername.SendKeys(username);
+            FW.Log.Info("Entered Username");
             return this;
         }
 
         public HRMLoginPage EnterPassword(string password)
         {
             Map.TextboxPassword.SendKeys(password);
+            FW.Log.Info("Entered Password");
             return this;
         }
 
         public HRMHomePage ClickOnLogin()
         {
             Map.ButtonLogin.Click();
+            FW.Log.Info("Clicked on Login btn");
             return new HRMHomePage();
         }
 

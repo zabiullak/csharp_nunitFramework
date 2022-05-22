@@ -11,7 +11,8 @@ namespace FreeCodeCamp.Tests
 {
     class HRMTests:TestBase
     {
-        [Test,Category("HRM_Application")]
+        [Test,Category("HomePage")]
+        [Parallelizable]
         public void LoginLogoutTest()
         {
             string title =  Pages.GoToOrangeHrmApplication().EnterUserName("Admin").EnterPassword("admin123").ClickOnLogin()

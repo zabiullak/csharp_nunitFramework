@@ -1,4 +1,5 @@
-﻿using Framework.Selenium;
+﻿using Framework;
+using Framework.Selenium;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace FreeCodeCamp.WebPages
         public HeaderNav GotoMenu()
         {
             HeaderNav.GotoMenu();
+            FW.Log.Info("Clicked on Menu");
             return HeaderNav;
         }
     }

@@ -1,4 +1,5 @@
-﻿using Framework.Selenium;
+﻿using Framework;
+using Framework.Selenium;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,7 @@ namespace FreeCodeCamp.WebPages
             {
                 _title.Add(ele.Text.Trim());
             }
+            FW.Log.Info("returning the all the link items in the Page");
             return _title;
         }
     }
