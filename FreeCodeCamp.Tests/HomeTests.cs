@@ -1,17 +1,22 @@
 using FreeCodeCamp.Tests.Base;
 using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System.IO;
+using System.Collections.Generic;
+using System;
+using FreeCodeCamp.WebPages;
+using Framework;
 
-namespace FreeCodeCamp.Test
+namespace FreeCodeCamp.Tests
 {
     public class HomeTests : TestBase 
     {
         [Test,Category("HomePage")]
-        public void printAllLinksOnHomePage()
+        public void printAllNewsHeadings()
         {
-
+            List<string> lstOfNews = Pages.GotoFreeCodeCamp().GotoMenu().ClickOnNews().GetTheNewsTitle();
+            foreach(string name in lstOfNews) {
+                FW.Log.Info(name);
+            }
+            Assert.That(lstOfNews, Is.Not.Empty.Or.Not.Null);
         }
     }
 }

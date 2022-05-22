@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,6 +26,23 @@ namespace Framework.Selenium
             Wait = new Wait(FW.Config.Driver.WaitSeconds);
             Window = new Window();
             Window.Maximize();
+        }
+
+        public static Element FindElement(By by, [Optional]string eleName)
+        {
+            var element = Wait.Until(drvr => drvr.FindElement(by));
+            return new Element(element, eleName)
+            {
+                FoundBy = by
+            };
+        }
+
+        public static Elements FindElements(By by)
+        {
+            return new Elements(Current.FindElements(by))
+            {
+                FoundBy = by
+            };
         }
 
         public static IWebDriver Current => _driver ?? throw new NullReferenceException("_driver is null.");

@@ -1,12 +1,14 @@
-﻿using System;
+﻿using Framework.Selenium;
+using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FreeCodeCamp.Pages
+namespace FreeCodeCamp.WebPages
 {
-    public class HomePage
+    public class HomePage:PageBase
     {
         public readonly HomePageMap Map;
 
@@ -15,12 +17,11 @@ namespace FreeCodeCamp.Pages
             Map = new HomePageMap();
         }
 
-        public HomePage Goto()
+        public HeaderNav GotoMenu()
         {
-            HeaderNav.Map.DeckBuilderLink.Click();
-            return this;
+            HeaderNav.GotoMenu();
+            return HeaderNav;
         }
-
     }
 
     public class HomePageMap

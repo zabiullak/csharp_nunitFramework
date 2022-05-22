@@ -38,5 +38,6 @@ namespace Framework.Selenium
             Driver.Current.Manage().Window.Position = new Point(0, 0);
             Driver.Current.Manage().Window.Size = ScreenSize;
         }
+
     }
 }

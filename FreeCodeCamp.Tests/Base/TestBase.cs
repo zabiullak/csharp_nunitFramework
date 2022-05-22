@@ -1,5 +1,6 @@
 ﻿using Framework;
 using Framework.Selenium;
+using FreeCodeCamp.WebPages;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using System;
@@ -7,7 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using FreeCodeCamp.Pages;
 
 namespace FreeCodeCamp.Tests.Base
 {
@@ -25,8 +25,8 @@ namespace FreeCodeCamp.Tests.Base
         {
             FW.SetLogger();
             Driver.Init();
-            FreeCodeCamp.Pages.Pages.Init();
-            Driver.Goto(FW.Config.Test.Url);
+            Pages.Init();
+            //Driver.Goto(FW.Config.Test.Url);
         }
 
         [TearDown]

@@ -20,6 +20,7 @@ namespace Framework
 
     public class TestSettings
     {
-        public string Url { get; set; }
+        public string url_freeCodeCamp { get; set; }
+        public string url_orangeHRM { get; set; }
     }
 }

@@ -4,7 +4,8 @@
         "waitSeconds": 10
     },
 
-    "test": {
-        "url": "freeCodeCamp.org"
-    }
+  "test": {
+    "url_freeCodeCamp": "freeCodeCamp.org",
+    "url_orangeHRM": "opensource-demo.orangehrmlive.com/index.php/auth/login"
+  }
 }
