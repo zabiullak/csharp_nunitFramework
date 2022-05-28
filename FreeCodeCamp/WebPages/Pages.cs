@@ -22,13 +22,21 @@ namespace FreeCodeCamp.WebPages
         [ThreadStatic]
         public static NewsPage NewsPage;
 
-        
+        [ThreadStatic]
+        public static Sikuli_Page Sikuli_Page;
+
+        [ThreadStatic]
+        public static HerokuApp HerokuApp;
+
+
         public static void Init()
         {
+            Sikuli_Page = new Sikuli_Page();
             Home = new HomePage();
             HRMLoginPage = new HRMLoginPage();
             HRMHomePage = new HRMHomePage();
             NewsPage = new NewsPage();
+            HerokuApp = new HerokuApp();
         }
 
         public static HRMLoginPage GoToOrangeHrmApplication()
