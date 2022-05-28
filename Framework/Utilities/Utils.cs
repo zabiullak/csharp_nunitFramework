@@ -14,5 +14,10 @@ namespace Framework.Utilities
         {
             return FW.WORKSPACE_DIRECTORY+ @"Framework\Resources\Images\" + image;
         }
+
+        public static string GetFilePathName(string name)
+        {
+            return FW.WORKSPACE_DIRECTORY + @"Framework\Resources\Files\" + name;
+        }
     }
 }

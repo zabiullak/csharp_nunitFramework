@@ -1,4 +1,5 @@
 ﻿using FreeCodeCamp.WebPages;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,13 +17,16 @@ namespace FreeCodeCamp.Features.Steps
         [Then(@"Click on Choose File and Upload a New File")]
         public void ThenClickOnChooseFileAndUploadANewFile()
         {
-            Pages.HerokuApp.ClickOnFileUpload();
+            //Pages.HerokuApp.ClickOnFileUpload();
+            Pages.HerokuApp.SendFile("Info.txt");
         }
 
         [Then(@"Verify FileUploaded Successfully")]
         public void ThenVerifyFileUploadedSuccessfully()
         {
-            ScenarioContext.Current.Pending();
+            Pages.HerokuApp.ClickOnFileUpload();
+            string Filename = Pages.HerokuApp.GetFileName();
+            Assert.That(Filename, Is.EqualTo("Info.txt"));
         }
 
     }
