@@ -1,5 +1,6 @@
 ﻿using Framework;
 using Framework.Selenium;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
 
@@ -24,6 +25,7 @@ namespace FreeCodeCamp.WebPages
         {
             Map.TextboxPassword.SendKeys(password);
             FW.Log.Info("Entered Password");
+            //TestContext.AddTestAttachment("Login.png", "after endtering Password");
             return this;
         }
 

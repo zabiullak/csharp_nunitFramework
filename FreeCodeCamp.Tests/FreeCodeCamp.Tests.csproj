@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Framework\Framework.csproj" />
     <ProjectReference Include="..\FreeCodeCamp\FreeCodeCamp.csproj" />
   </ItemGroup>
 
