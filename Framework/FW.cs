@@ -1,4 +1,7 @@
-﻿using Framework.Logging;
+﻿using AventStack.ExtentReports;
+using AventStack.ExtentReports.Reporter;
+using Framework.Logging;
+using Framework.Utilities;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using System;
@@ -25,6 +28,7 @@ namespace Framework
 
         [ThreadStatic]
         public static Logger _logger;
+
 
         public static DirectoryInfo CreateTestResultDirectory()
         {
@@ -58,6 +62,7 @@ namespace Framework
             }
         }
 
+        
         private static object _setLoggerLock = new object();
 
         public static void SetConfig()

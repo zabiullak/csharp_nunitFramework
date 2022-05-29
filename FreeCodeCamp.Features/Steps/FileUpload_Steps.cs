@@ -13,8 +13,6 @@ namespace FreeCodeCamp.Features.Steps
     [Binding]
     public sealed class FileUpload_Steps
     {
-
-
         [Then(@"Click on Choose File and Upload a New File")]
         public void ThenClickOnChooseFileAndUploadANewFile()
         {
@@ -28,6 +26,5 @@ namespace FreeCodeCamp.Features.Steps
             string Filename = Pages.HerokuApp.GetFileName();
             Assert.That(Filename, Is.EqualTo("Info.txt"));
         }
-
     }
 }
