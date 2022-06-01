@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Framework.Utilities.Listeners;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using System;
@@ -26,7 +27,10 @@ namespace Framework.Selenium
                 case "chrome":
                     new DriverManager().SetUpDriver(new ChromeConfig(), VersionResolveStrategy.MatchingBrowser);
                     //return new ChromeDriver(FW.WORKSPACE_DIRECTORY + "_drivers");
+                    IWebDriver _driver =  new ChromeDriver(AddChromeOptions());
                     return new ChromeDriver(AddChromeOptions());
+                    //WebListener webListener = new WebListener(_driver);
+                    //return webListener.Driver;
 
                 case "firefox":
                     return new FirefoxDriver();

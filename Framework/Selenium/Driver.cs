@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Framework.Utilities.Listeners;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,6 +27,8 @@ namespace Framework.Selenium
             Wait = new Wait(FW.Config.Driver.WaitSeconds);
             Window = new Window();
             Window.Maximize();
+            WebListener webListener = new WebListener(_driver);
+            _driver = webListener.Driver;
         }
 
         public static Element FindElement(By by, [Optional]string eleName)

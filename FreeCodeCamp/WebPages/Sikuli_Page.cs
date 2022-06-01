@@ -24,7 +24,6 @@ namespace FreeCodeCamp.WebPages
         public void GoToOrangeHrmApplication(string url)
         {
             Driver.Goto(url);
-            FW.Log.Info($"Landed on Url -> {url}");
         }
 
         public Sikuli_Page EnterUserName(string username)

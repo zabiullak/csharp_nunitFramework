@@ -26,18 +26,18 @@ namespace FreeCodeCamp.Features.Hooks
         public static ExtentReports Report => extent ?? throw new NullReferenceException("_extent is null. SetExtentReport() first.");
 
 
-        [ThreadStatic] private static ExtentTest featureName;
+        [ThreadStatic] private static ExtentTest? featureName;
 
-        [ThreadStatic] private static ExtentTest scenario;
+        [ThreadStatic] private static ExtentTest? scenario;
 
-        private static ExtentReports extent;
+        private static ExtentReports? extent ;
         
         [ThreadStatic]
-        public static DirectoryInfo CurrentTestDirectory;
+        public static DirectoryInfo? CurrentTestDirectory;
 
         private FeatureContext _featureContext;
         private ScenarioContext _scenarioContext;
-        private ScenarioStepContext _scenarioStepContext;
+        private ScenarioStepContext? _scenarioStepContext;
 
         public Hook(ScenarioContext scenarioContext, FeatureContext featureContext)
         {
