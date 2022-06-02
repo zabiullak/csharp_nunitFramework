@@ -1,10 +1,14 @@
-﻿using Framework;
+﻿using Applitools;
+using Applitools.Selenium;
+using Framework;
 using Framework.Selenium;
+using Framework.Utilities.Applitools;
 using FreeCodeCamp.WebPages;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +31,7 @@ namespace FreeCodeCamp.Tests.Base
             Driver.Init();
             Pages.Init();
             //Driver.Goto(FW.Config.Test.Url);
+            ApplitoolsEyes.Init();
         }
 
         [TearDown]
@@ -47,8 +52,13 @@ namespace FreeCodeCamp.Tests.Base
             {
                 FW.Log.Warning("Outcome: " + outcome);
             }
-
             Driver.Quit();
+
+            ApplitoolsEyes.TearDownEyes();
         }
+
+
+
+        
     }
 }

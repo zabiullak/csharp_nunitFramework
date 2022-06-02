@@ -21,13 +21,16 @@ namespace Framework.Selenium
         [ThreadStatic]
         public static Window Window;
 
+        [ThreadStatic]
+        public static WebListener webListener;
+
         public static void Init()
         {
             _driver = DriverFactory.Build(FW.Config.Driver.Browser);
             Wait = new Wait(FW.Config.Driver.WaitSeconds);
             Window = new Window();
             Window.Maximize();
-            WebListener webListener = new WebListener(_driver);
+            webListener = new WebListener(_driver);
             _driver = webListener.Driver;
         }
 

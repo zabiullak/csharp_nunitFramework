@@ -46,7 +46,7 @@ namespace Framework
             lock (_setLoggerLock)
             {
                 var testResultDir = WORKSPACE_DIRECTORY + "TestResults";
-                var testName = TestContext.CurrentContext.Test.Name;
+                var testName = TestContext.CurrentContext.Test.Name.Split('(')[0];
                 var fullPath = $"{testResultDir}/{testName}";
 
                 if (Directory.Exists(fullPath))

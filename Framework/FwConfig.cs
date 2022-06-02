@@ -10,6 +10,12 @@ namespace Framework
     {
         public DriverSettings Driver { get; set; }
         public TestSettings Test { get; set; }
+        public Activate Activate { get; set; }
+    }
+
+    public class Activate
+    {
+        public bool applitools_eye { get; set; }
     }
 
     public class DriverSettings

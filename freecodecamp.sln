@@ -18,9 +18,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0EE72A3-239B-4BF1-8F8B-9A47FBD2B95E}"
 	ProjectSection(SolutionItems) = preProject
 		framework-config.json = framework-config.json
+		ToDo-List.txt = ToDo-List.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCodeCamp.Features", "FreeCodeCamp.Features\FreeCodeCamp.Features.csproj", "{977B5F6B-D477-4E16-90C8-A168C19751B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCodeCamp.Features", "FreeCodeCamp.Features\FreeCodeCamp.Features.csproj", "{977B5F6B-D477-4E16-90C8-A168C19751B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,9 +1,13 @@
-﻿using FreeCodeCamp.Tests.Base;
+﻿using Applitools.Selenium;
+using Framework.Selenium;
+using Framework.Utilities.Applitools;
+using FreeCodeCamp.Tests.Base;
 using FreeCodeCamp.Tests.Data;
 using FreeCodeCamp.WebPages;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +16,7 @@ namespace FreeCodeCamp.Tests
 {
     class HRMTests:TestBase
     {
+
         [Test, Category("HomePage")]
         [Parallelizable]
         public void LoginLogoutTest()
