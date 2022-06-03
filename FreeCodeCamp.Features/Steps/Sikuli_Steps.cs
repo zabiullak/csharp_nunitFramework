@@ -7,9 +7,6 @@ using TechTalk.SpecFlow;
 using FreeCodeCamp.WebPages;
 using NUnit.Framework;
 
-[assembly: Parallelizable(ParallelScope.Fixtures)]
-[assembly: LevelOfParallelism(2)]
-
 namespace FreeCodeCamp.Features.Steps
 {
 

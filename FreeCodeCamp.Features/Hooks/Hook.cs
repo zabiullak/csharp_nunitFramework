@@ -129,6 +129,16 @@ namespace FreeCodeCamp.Features.Hooks
             extent.Flush();
         }
 
+        [AfterScenario("retry")]
+        public static void Retry()
+        {
+             if (ScenarioContext.Current.TestError != null)
+            {
+                // ?     
+            }
+        }
+
+
         private MediaEntityModelProvider CreateScreenshotforExtentReport(IWebDriver drv)
         {
             string ScreenShotName = DateTime.Now.ToString("yyyyMMddHHmmss");
@@ -151,12 +161,13 @@ namespace FreeCodeCamp.Features.Hooks
                 Console.WriteLine(ex.Message);
             }
             Driver.Current.Quit();
+            extent.Flush();
         }
 
         [AfterFeature]
         public static void AfterFeature()
         {
-
+            extent.Flush();
         }
 
         [AfterTestRun]

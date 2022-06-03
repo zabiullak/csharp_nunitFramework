@@ -27,6 +27,7 @@
     <SpecFlowFeatureFiles Update="Features\FileUploadScenario.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>FileUploadScenario.feature.cs</LastGenOutput>
+      <Generator Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">SpecFlowSingleFileGenerator</Generator>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\SikuliActions.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -36,6 +37,15 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FreeCodeCamp\FreeCodeCamp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Default.srprofile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sikulirestapi-1.0.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

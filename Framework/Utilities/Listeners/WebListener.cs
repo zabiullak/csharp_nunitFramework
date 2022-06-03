@@ -70,7 +70,7 @@ namespace Framework.Utilities.Listeners
 
         private void WhenNavigatingForward(object sender, WebDriverNavigationEventArgs e)
         {
-            FW.Log.Info("Navigating forward");
+            //FW.Log.Info("Navigating forward");
         }
 
         private void AfterNavigatedBack(object sender, WebDriverNavigationEventArgs e)
@@ -80,7 +80,7 @@ namespace Framework.Utilities.Listeners
 
         private void WhenNavigatingBack(object sender, WebDriverNavigationEventArgs e)
         {
-            FW.Log.Info("Navigating back");
+            //FW.Log.Info("Navigating back");
         }
 
         private void AfterNavigation(object sender, WebDriverNavigationEventArgs e)
@@ -90,7 +90,7 @@ namespace Framework.Utilities.Listeners
 
         private void WhenNavigating(object sender, WebDriverNavigationEventArgs e)
         {
-            FW.Log.Info("Navigating to url " + e.Url);
+            //FW.Log.Info("Navigating to url " + e.Url);
         }
     }
 }
