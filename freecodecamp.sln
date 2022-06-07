@@ -17,7 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCodeCamp.Tests", "FreeC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0EE72A3-239B-4BF1-8F8B-9A47FBD2B95E}"
 	ProjectSection(SolutionItems) = preProject
-		..\esports-automation\Esports\docker-compose.yml = ..\esports-automation\Esports\docker-compose.yml
 		framework-config.json = framework-config.json
 		Notes.doc = Notes.doc
 		ToDo-List.txt = ToDo-List.txt
