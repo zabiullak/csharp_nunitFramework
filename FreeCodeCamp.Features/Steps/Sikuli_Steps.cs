@@ -17,20 +17,20 @@ namespace FreeCodeCamp.Features.Steps
         [Given(@"User Launch the '(.*)' URL")]
         public void GivenUserLaunchTheURL(string url)
         {
-            Pages.Sikuli_Page.GoToOrangeHrmApplication(url);
+            HrmApp.Sikuli_Page.GoToOrangeHrmApplication(url);
         }
 
         [Given(@"Enter UN as '(.*)' and PWD as '(.*)'")]
         public void GivenEnterUNAsAndPWDAs(string UN, string PWD)
         {
-            Pages.Sikuli_Page.EnterUserName(UN).EnterPassword(PWD);
+            HrmApp.Sikuli_Page.EnterUserName(UN).EnterPassword(PWD);
         }
 
         [Then(@"Click on Login using Sikuli Actions")]
         public void ThenClickOnLoginUsingSikuliActions()
         {
             //WebPages._sikuliPage.ClickOnLoginUsingSikuli();
-            Pages.Sikuli_Page.ClickOnLoginUsingSikuli("Login.png");
+            HrmApp.Sikuli_Page.ClickOnLoginUsingSikuli("Login.png");
         }
 
     }

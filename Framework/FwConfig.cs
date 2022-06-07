@@ -22,6 +22,7 @@ namespace Framework
     {
         public string Browser { get; set; }
         public int WaitSeconds { get; set; }
+        public string Type { get; set; }
     }
 
     public class TestSettings

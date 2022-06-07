@@ -54,7 +54,7 @@ namespace FreeCodeCamp.Tests
             // Visual checkpoint #1
             eyes.Check(Target.Window().Fully().WithName("Login Window"));
 
-            Pages.Sikuli_Page.EnterUserName("Admin").EnterPassword("admin123");
+            HrmApp.Sikuli_Page.EnterUserName("Admin").EnterPassword("admin123");
 
             // Visual checkpoint #2 - Check the app page.
             eyes.Check(Target.Window().Fully().WithName("Home Page HRM"));

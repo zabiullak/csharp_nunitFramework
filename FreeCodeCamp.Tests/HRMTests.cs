@@ -21,7 +21,7 @@ namespace FreeCodeCamp.Tests
         [Parallelizable]
         public void LoginLogoutTest()
         {
-            string title = Pages.GoToOrangeHrmApplication().EnterUserName("Admin").EnterPassword("admin123").ClickOnLogin()
+            string title = HrmApp.GoToOrangeHrmApplication().EnterUserName("Admin").EnterPassword("admin123").ClickOnLogin()
                 .ClickOnWelcome().ClickLogout()
                 .GetTiltle();
 
@@ -32,7 +32,7 @@ namespace FreeCodeCamp.Tests
         [Parallelizable]
         public void LoginLogoutTest_Sample()
         {
-            Pages.GoToOrangeHrmApplication().EnterUserName("Admin").EnterPassword("admin123").ClickOnLogin();
+            HrmApp.GoToOrangeHrmApplication().EnterUserName("Admin").EnterPassword("admin123").ClickOnLogin();
                 //.ClickOnWelcome().ClickLogout()
                 //.GetTiltle();
 
@@ -47,7 +47,7 @@ namespace FreeCodeCamp.Tests
             [Values("Admin", "Admin1")] string UN, 
             [Values("admin123", "admin1234")] string PW)
         {
-            string title = Pages.GoToOrangeHrmApplication().EnterUserName(UN).EnterPassword(PW).ClickOnLogin()
+            string title = HrmApp.GoToOrangeHrmApplication().EnterUserName(UN).EnterPassword(PW).ClickOnLogin()
                 .ClickOnWelcome().ClickLogout()
                 .GetTiltle();
 
@@ -61,7 +61,7 @@ namespace FreeCodeCamp.Tests
             [Values("Admin", "Admin1")] string UN,
             [Values("admin123", "admin1234")] string PW)
         {
-            string title = Pages.GoToOrangeHrmApplication().EnterUserName(UN).EnterPassword(PW).ClickOnLogin()
+            string title = HrmApp.GoToOrangeHrmApplication().EnterUserName(UN).EnterPassword(PW).ClickOnLogin()
                 .ClickOnWelcome().ClickLogout()
                 .GetTiltle();
 
@@ -73,7 +73,7 @@ namespace FreeCodeCamp.Tests
         [TestCase("Admin", "admin1234",Description ="It Should Fail")]
         public void LoginLogoutTest_TestCase(string UN,string PWD)
         {
-            string title = Pages.GoToOrangeHrmApplication().EnterUserName(UN).EnterPassword(PWD).ClickOnLogin()
+            string title = HrmApp.GoToOrangeHrmApplication().EnterUserName(UN).EnterPassword(PWD).ClickOnLogin()
                 .ClickOnWelcome().ClickLogout()
                 .GetTiltle();
 
@@ -83,7 +83,7 @@ namespace FreeCodeCamp.Tests
         [TestCaseSource(typeof(TestData),nameof(TestData.LoginDetails))]
         public void LoginLogoutTest_TestCaseSource(string UN, string PWD)
         {
-            string title = Pages.GoToOrangeHrmApplication().EnterUserName(UN).EnterPassword(PWD).ClickOnLogin()
+            string title = HrmApp.GoToOrangeHrmApplication().EnterUserName(UN).EnterPassword(PWD).ClickOnLogin()
                 .ClickOnWelcome().ClickLogout()
                 .GetTiltle();
 

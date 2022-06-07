@@ -1,32 +1,27 @@
 ﻿using Framework;
 using Framework.Selenium;
+using FreeCodeCamp.WebPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FreeCodeCamp.WebPages
+namespace FreeCodeCamp
 {
-    public class Pages
+    public class HrmApp
     {
-        [ThreadStatic]
-        public static HomePage Home;
+        [ThreadStatic] public static HomePage Home;
 
-        [ThreadStatic]
-        public static HRMHomePage HRMHomePage;
+        [ThreadStatic] public static HRMHomePage HRMHomePage;
 
-        [ThreadStatic]
-        public static HRMLoginPage HRMLoginPage;
+        [ThreadStatic] public static HRMLoginPage HRMLoginPage;
 
-        [ThreadStatic]
-        public static NewsPage NewsPage;
+        [ThreadStatic] public static NewsPage NewsPage;
 
-        [ThreadStatic]
-        public static Sikuli_Page Sikuli_Page;
+        [ThreadStatic] public static Sikuli_Page Sikuli_Page;
 
-        [ThreadStatic]
-        public static HerokuApp HerokuApp;
+        [ThreadStatic] public static HerokuApp HerokuApp;
 
 
         public static void Init()

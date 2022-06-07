@@ -14,7 +14,7 @@ namespace FreeCodeCamp.Tests
         [Order(1)]
         public void PrintAllNewsHeadings()
         {
-            List<string> lstOfNews = Pages.GotoFreeCodeCamp().GotoMenu().ClickOnNews().GetTheNewsTitle();
+            List<string> lstOfNews = HrmApp.GotoFreeCodeCamp().GotoMenu().ClickOnNews().GetTheNewsTitle();
             foreach (string name in lstOfNews) {
                 FW.Log.Info(name);
             }
@@ -27,7 +27,7 @@ namespace FreeCodeCamp.Tests
         [Order(2)]
         public void PrintAllNewsHeadings1()
         {
-            List<string> lstOfNews = Pages.GotoFreeCodeCamp().GotoMenu().ClickOnNews().GetTheNewsTitle();
+            List<string> lstOfNews = HrmApp.GotoFreeCodeCamp().GotoMenu().ClickOnNews().GetTheNewsTitle();
             foreach (string name in lstOfNews)
             {
                 FW.Log.Info(name);
@@ -42,7 +42,7 @@ namespace FreeCodeCamp.Tests
         [Order(3)]
         public void PrintAllNewsHeadings2()
         {
-            List<string> lstOfNews = Pages.GotoFreeCodeCamp().GotoMenu().ClickOnNews().GetTheNewsTitle();
+            List<string> lstOfNews = HrmApp.GotoFreeCodeCamp().GotoMenu().ClickOnNews().GetTheNewsTitle();
             foreach (string name in lstOfNews)
             {
                 FW.Log.Info(name);
@@ -56,7 +56,7 @@ namespace FreeCodeCamp.Tests
         [Platform(Include ="Widows")]
         public void PrintAllNewsHeadings3()
         {
-            List<string> lstOfNews = Pages.GotoFreeCodeCamp().GotoMenu().ClickOnNews().GetTheNewsTitle();
+            List<string> lstOfNews = HrmApp.GotoFreeCodeCamp().GotoMenu().ClickOnNews().GetTheNewsTitle();
             foreach (string name in lstOfNews)
             {
                 FW.Log.Info(name);

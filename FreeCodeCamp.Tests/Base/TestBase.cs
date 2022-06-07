@@ -29,7 +29,7 @@ namespace FreeCodeCamp.Tests.Base
         {
             FW.SetLogger();
             Driver.Init();
-            Pages.Init();
+            HrmApp.Init();
             //Driver.Goto(FW.Config.Test.Url);
             ApplitoolsEyes.Init();
         }

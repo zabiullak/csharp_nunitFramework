@@ -1,6 +1,7 @@
 {
     "driver": {
         "browser": "chrome",
+        "type": "local",
         "waitSeconds": 10
     },
 

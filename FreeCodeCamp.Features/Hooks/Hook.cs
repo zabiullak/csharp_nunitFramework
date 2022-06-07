@@ -69,7 +69,7 @@ namespace FreeCodeCamp.Features.Hooks
         {
             FW.SetLogger();
             Driver.Init();
-            Pages.Init();
+            HrmApp.Init();
             scenario = InitScenario();
         }
         [BeforeStep]
