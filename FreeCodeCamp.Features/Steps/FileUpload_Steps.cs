@@ -1,5 +1,8 @@
-﻿using FreeCodeCamp.WebPages;
+﻿using Framework;
+using Framework.Selenium;
+using FreeCodeCamp.WebPages;
 using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,5 +29,15 @@ namespace FreeCodeCamp.Features.Steps
             string Filename = HrmApp.HerokuApp.GetFileName();
             Assert.That(Filename, Is.EqualTo("Info.txt"));
         }
+
+        [Then(@"Verify title of the page is equal to '(.*)'")]
+        public void ThenVerifyTitleOfThePageIsEqualTo(string title)
+        {
+            if (Driver.Current.Title.Contains(title))
+            {
+                FW.Log.Info($"Landed on {title} Page");
+            }
+        }
+
     }
 }

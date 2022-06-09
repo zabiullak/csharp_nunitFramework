@@ -17,7 +17,6 @@ namespace FreeCodeCamp.Tests
     [TestFixture]
     public class VisualTesting_Eyes : TestBase
     {
-        private EyesRunner runner;
         private Eyes eyes;
 
         private ChromeDriver driver;
