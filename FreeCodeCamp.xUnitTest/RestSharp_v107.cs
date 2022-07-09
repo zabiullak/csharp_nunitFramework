@@ -15,7 +15,7 @@ namespace FreeCodeCamp.xUnitTest
         public async Task IndexAsync_GET()
         {
             var url = "https://reqres.in/api/users?page=2";
-            var client = new RestClient(url);
+            var client = new RestClient();
             var request = new RestRequest(url, Method.Get);
             RestResponse response = await client.ExecuteAsync(request);
             var Output = response.Content;
