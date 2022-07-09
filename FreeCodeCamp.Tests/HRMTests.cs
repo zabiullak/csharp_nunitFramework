@@ -1,7 +1,7 @@
-﻿using Applitools.Selenium;
+﻿//using Applitools.Selenium;
 using Framework;
 using Framework.Selenium;
-using Framework.Utilities.Applitools;
+//using Framework.Utilities.Applitools;
 using FreeCodeCamp.Tests.Base;
 using FreeCodeCamp.Tests.Data;
 using FreeCodeCamp.WebPages;

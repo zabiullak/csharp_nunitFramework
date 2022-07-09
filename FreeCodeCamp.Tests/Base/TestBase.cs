@@ -1,8 +1,8 @@
-﻿using Applitools;
-using Applitools.Selenium;
+﻿//using Applitools;
+//using Applitools.Selenium;
 using Framework;
 using Framework.Selenium;
-using Framework.Utilities.Applitools;
+//using Framework.Utilities.Applitools;
 using FreeCodeCamp.WebPages;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
@@ -17,7 +17,7 @@ namespace FreeCodeCamp.Tests.Base
 {
     public abstract class TestBase
     {
-        public readonly EyesRunner runner;
+        //public readonly EyesRunner runner;
 
         [OneTimeSetUp]
         public virtual void BeforeAll()
@@ -33,7 +33,7 @@ namespace FreeCodeCamp.Tests.Base
             Driver.Init();
             HrmApp.Init();
             //Driver.Goto(FW.Config.Test.Url);
-            ApplitoolsEyes.Init();
+            //ApplitoolsEyes.Init();
         }
 
         [TearDown]
@@ -56,7 +56,7 @@ namespace FreeCodeCamp.Tests.Base
             }
             Driver.Quit();
 
-            ApplitoolsEyes.TearDownEyes();
+            //ApplitoolsEyes.TearDownEyes();
         }
 
 

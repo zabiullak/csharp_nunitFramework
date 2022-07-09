@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+	  <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -10,11 +11,12 @@
 
   <ItemGroup>
     <PackageReference Include="ExtentReports" Version="4.1.0" />
-    <PackageReference Include="Eyes.Selenium" Version="3.7.0" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+	  <!--PackageReference Include="Eyes.Selenium" Version="3.7.0" /-->
     <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="RestSharp" Version="108.0.1" />
     <PackageReference Include="Selenium.Support" Version="4.1.1" />
     <PackageReference Include="Selenium.WebDriver" Version="4.1.1" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="101.0.4951.4100" />
     <PackageReference Include="Sikuli4Net" Version="1.0.6" />
     <PackageReference Include="SikuliSharp" Version="1.5.0" />
     <PackageReference Include="WebDriverManager" Version="2.12.4" />
