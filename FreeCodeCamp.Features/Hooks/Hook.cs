@@ -26,18 +26,18 @@ namespace FreeCodeCamp.Features.Hooks
         public static ExtentReports Report => extent ?? throw new NullReferenceException("_extent is null. SetExtentReport() first.");
 
 
-        [ThreadStatic] private static ExtentTest featureName;
+        [ThreadStatic] private static ExtentTest? featureName;
 
-        [ThreadStatic] private static ExtentTest scenario;
+        [ThreadStatic] private static ExtentTest? scenario;
 
-        private static ExtentReports extent;
+        private static ExtentReports? extent ;
         
         [ThreadStatic]
-        public static DirectoryInfo CurrentTestDirectory;
+        public static DirectoryInfo? CurrentTestDirectory;
 
         private FeatureContext _featureContext;
         private ScenarioContext _scenarioContext;
-        private ScenarioStepContext _scenarioStepContext;
+        private ScenarioStepContext? _scenarioStepContext;
 
         public Hook(ScenarioContext scenarioContext, FeatureContext featureContext)
         {
@@ -69,7 +69,7 @@ namespace FreeCodeCamp.Features.Hooks
         {
             FW.SetLogger();
             Driver.Init();
-            Pages.Init();
+            HrmApp.Init();
             scenario = InitScenario();
         }
         [BeforeStep]
@@ -129,6 +129,16 @@ namespace FreeCodeCamp.Features.Hooks
             extent.Flush();
         }
 
+        [AfterScenario("retry")]
+        public static void Retry()
+        {
+             if (ScenarioContext.Current.TestError != null)
+            {
+                // ?     
+            }
+        }
+
+
         private MediaEntityModelProvider CreateScreenshotforExtentReport(IWebDriver drv)
         {
             string ScreenShotName = DateTime.Now.ToString("yyyyMMddHHmmss");
@@ -151,12 +161,13 @@ namespace FreeCodeCamp.Features.Hooks
                 Console.WriteLine(ex.Message);
             }
             Driver.Current.Quit();
+            extent.Flush();
         }
 
         [AfterFeature]
         public static void AfterFeature()
         {
-
+            extent.Flush();
         }
 
         [AfterTestRun]

@@ -1,11 +1,17 @@
 {
     "driver": {
         "browser": "chrome",
+        "type": "local",
         "waitSeconds": 10
     },
 
-  "test": {
-    "url_freeCodeCamp": "freeCodeCamp.org",
-    "url_orangeHRM": "opensource-demo.orangehrmlive.com/index.php/auth/login"
-  }
+    "test": {
+        "url_freeCodeCamp": "freeCodeCamp.org",
+        "url_orangeHRM": "opensource-demo.orangehrmlive.com/index.php/auth/login"
+    },
+
+    "activate": {
+        "applitools_eye": false
+    }
+   
 }

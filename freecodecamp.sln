@@ -18,9 +18,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0EE72A3-239B-4BF1-8F8B-9A47FBD2B95E}"
 	ProjectSection(SolutionItems) = preProject
 		framework-config.json = framework-config.json
+		Notes.doc = Notes.doc
+		ToDo-List.txt = ToDo-List.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCodeCamp.Features", "FreeCodeCamp.Features\FreeCodeCamp.Features.csproj", "{977B5F6B-D477-4E16-90C8-A168C19751B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCodeCamp.Features", "FreeCodeCamp.Features\FreeCodeCamp.Features.csproj", "{977B5F6B-D477-4E16-90C8-A168C19751B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{37D62CE8-771B-4D67-BFB4-EDCD25AD4295}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCodeCamp.xUnitTest", "FreeCodeCamp.xUnitTest\FreeCodeCamp.xUnitTest.csproj", "{812B1392-F2BF-4ACF-B624-1E70BEB1F237}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +86,18 @@ Global
 		{977B5F6B-D477-4E16-90C8-A168C19751B6}.Release|x64.Build.0 = Release|Any CPU
 		{977B5F6B-D477-4E16-90C8-A168C19751B6}.Release|x86.ActiveCfg = Release|Any CPU
 		{977B5F6B-D477-4E16-90C8-A168C19751B6}.Release|x86.Build.0 = Release|Any CPU
+		{812B1392-F2BF-4ACF-B624-1E70BEB1F237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{812B1392-F2BF-4ACF-B624-1E70BEB1F237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{812B1392-F2BF-4ACF-B624-1E70BEB1F237}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{812B1392-F2BF-4ACF-B624-1E70BEB1F237}.Debug|x64.Build.0 = Debug|Any CPU
+		{812B1392-F2BF-4ACF-B624-1E70BEB1F237}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{812B1392-F2BF-4ACF-B624-1E70BEB1F237}.Debug|x86.Build.0 = Debug|Any CPU
+		{812B1392-F2BF-4ACF-B624-1E70BEB1F237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{812B1392-F2BF-4ACF-B624-1E70BEB1F237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{812B1392-F2BF-4ACF-B624-1E70BEB1F237}.Release|x64.ActiveCfg = Release|Any CPU
+		{812B1392-F2BF-4ACF-B624-1E70BEB1F237}.Release|x64.Build.0 = Release|Any CPU
+		{812B1392-F2BF-4ACF-B624-1E70BEB1F237}.Release|x86.ActiveCfg = Release|Any CPU
+		{812B1392-F2BF-4ACF-B624-1E70BEB1F237}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

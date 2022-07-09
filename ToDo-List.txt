@@ -1,0 +1,11 @@
+01/June
+
+1> i have to add the Applitool into Nunit framework. and  then check with SpecFlow Project As well .
+and it should be an optoinal .and dont make it as mandatory kind of thing. 
+
+
+2> add PDF validation  -- Done
+
+3> RestSharp   -- done with Basic installation
+
+4> add Xunit Project as well  -- Done

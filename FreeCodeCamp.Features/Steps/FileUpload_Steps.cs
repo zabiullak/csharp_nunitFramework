@@ -1,5 +1,8 @@
-﻿using FreeCodeCamp.WebPages;
+﻿using Framework;
+using Framework.Selenium;
+using FreeCodeCamp.WebPages;
 using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,15 +19,25 @@ namespace FreeCodeCamp.Features.Steps
         [Then(@"Click on Choose File and Upload a New File")]
         public void ThenClickOnChooseFileAndUploadANewFile()
         {
-            Pages.HerokuApp.SendFile("Info.txt");
+            HrmApp.HerokuApp.SendFile("Info.txt");
         }
 
         [Then(@"Verify FileUploaded Successfully")]
         public void ThenVerifyFileUploadedSuccessfully()
         {
-            Pages.HerokuApp.ClickOnFileUpload();
-            string Filename = Pages.HerokuApp.GetFileName();
+            HrmApp.HerokuApp.ClickOnFileUpload();
+            string Filename = HrmApp.HerokuApp.GetFileName();
             Assert.That(Filename, Is.EqualTo("Info.txt"));
         }
+
+        [Then(@"Verify title of the page is equal to '(.*)'")]
+        public void ThenVerifyTitleOfThePageIsEqualTo(string title)
+        {
+            if (Driver.Current.Title.Contains(title))
+            {
+                FW.Log.Info($"Landed on {title} Page");
+            }
+        }
+
     }
 }

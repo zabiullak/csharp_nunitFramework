@@ -1,6 +1,8 @@
-﻿using OpenQA.Selenium;
+﻿using Framework.Utilities.Listeners;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,23 +19,79 @@ namespace Framework.Selenium
     {
         static ChromeOptions options = new ChromeOptions();
 
-        public static IWebDriver Build(string browserName)
+        public static IWebDriver Build(string browserName, string type)
         {
             FW.Log.Info($"Browser: {browserName}");
+
+            if(type.ToLower() == "local")
+            {
+                switch (browserName)
+                {
+                    case "chrome":
+                        return BuildChromeDriver();
+
+                    case "firefox":
+                        return new FirefoxDriver();
+
+                    default:
+                        throw new System.ArgumentException($"{browserName} not supported locally.");
+                }
+            }
+            else if (type.ToLower() == "remote")
+            {
+                return BuildRemoteDriver(browserName);
+            }
+            else
+            {
+                throw new ArgumentException($"{type} is invalid. Choose 'local' or 'remote'.");
+            }
+            
+        }
+
+        private static IWebDriver BuildChromeDriver()
+        {
+            new DriverManager().SetUpDriver(new ChromeConfig(), VersionResolveStrategy.MatchingBrowser);
+            //return new ChromeDriver(FW.WORKSPACE_DIRECTORY + "_drivers");
+            //IWebDriver _driver =  new ChromeDriver(AddChromeOptions());
+            return new ChromeDriver(AddChromeOptions());
+            //WebListener webListener = new WebListener(_driver);
+            //return webListener.Driver;
+        }
+
+        private static IWebDriver BuildRemoteDriver(string browserName)
+        {
+            var DOCKER_GRID_HUB_URI = new Uri("http://localhost:4444/wd/hub");
+            RemoteWebDriver driver;
 
             switch (browserName)
             {
                 case "chrome":
-                    new DriverManager().SetUpDriver(new ChromeConfig(), VersionResolveStrategy.MatchingBrowser);
-                    //return new ChromeDriver(FW.WORKSPACE_DIRECTORY + "_drivers");
-                    return new ChromeDriver(AddChromeOptions());
+                    var chromeOptions = new ChromeOptions
+                    {
+                        BrowserVersion = "",
+                        PlatformName = "LINUX",
+                    };
+
+                    chromeOptions.AddArgument("--start-maximized");
+
+                    driver = new RemoteWebDriver(DOCKER_GRID_HUB_URI, chromeOptions.ToCapabilities());
+                    break;
 
                 case "firefox":
-                    return new FirefoxDriver();
+                    var firefoxOptions = new FirefoxOptions
+                    {
+                        BrowserVersion = "",
+                        PlatformName = "LINUX",
+                    };
+
+                    driver = new RemoteWebDriver(DOCKER_GRID_HUB_URI, firefoxOptions.ToCapabilities());
+                    break;
 
                 default:
-                    throw new System.ArgumentException($"{browserName} not supported.");
+                    throw new ArgumentException($"{browserName} is not supported remotely.");
             }
+
+            return driver;
         }
 
         public static ChromeOptions AddChromeOptions()
@@ -48,6 +106,16 @@ namespace Framework.Selenium
             options.AddArguments("enable-features=NetworkServiceInProcess");
             options.AddArguments("disable-features=NetworkService");
             return options;
+        }
+
+        private static string PlatformDriver
+        {
+            get
+            {
+                return Environment.OSVersion.Platform.ToString().Contains("Win")
+                    ? "_drivers/windows"
+                    : "_drivers/mac";
+            }
         }
     }
 }
