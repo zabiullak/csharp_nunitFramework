@@ -1,7 +1,7 @@
 {
     "driver": {
         "browser": "chrome",
-        "type": "remote",
+        "type": "local",
         "waitSeconds": 10
     },
 

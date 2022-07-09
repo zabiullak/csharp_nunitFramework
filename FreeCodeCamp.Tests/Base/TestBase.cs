@@ -17,7 +17,7 @@ namespace FreeCodeCamp.Tests.Base
 {
     public abstract class TestBase
     {
-        private readonly EyesRunner runner;
+        public readonly EyesRunner runner;
 
         [OneTimeSetUp]
         public virtual void BeforeAll()

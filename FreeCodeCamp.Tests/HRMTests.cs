@@ -1,4 +1,5 @@
 ﻿using Applitools.Selenium;
+using Framework;
 using Framework.Selenium;
 using Framework.Utilities.Applitools;
 using FreeCodeCamp.Tests.Base;
@@ -33,9 +34,10 @@ namespace FreeCodeCamp.Tests
         public void LoginLogoutTest_Sample()
         {
             HrmApp.GoToOrangeHrmApplication().EnterUserName("Admin").EnterPassword("admin123").ClickOnLogin();
-                //.ClickOnWelcome().ClickLogout()
-                //.GetTiltle();
+            //.ClickOnWelcome().ClickLogout()
+            //.GetTiltle();
 
+            FW.Log.Info("Hii");
             //Assert.That(title, Is.EqualTo("OrangeHRM"));
         }
 
