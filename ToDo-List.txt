@@ -9,3 +9,5 @@ and it should be an optoinal .and dont make it as mandatory kind of thing.
 3> RestSharp   -- done with Basic installation
 
 4> add Xunit Project as well  -- Done
+
+5> Rest Sample ==>  https://fakerestapi.azurewebsites.net/index.html

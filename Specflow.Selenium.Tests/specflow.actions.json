@@ -1,0 +1,12 @@
+﻿{
+    "selenium": {
+        "browser": "chrome",
+        "arguments": [
+            "--start-maximized",
+            "--incognito"
+        ],
+        "defaultTimeout": 120,
+        "pollingInterval": 5
+    }
+}
+
